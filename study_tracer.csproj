@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome, Version=1.0.5578.25903, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome-ASP.NET.1.0.5578.25903\lib\net451\FontAwesome.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -588,6 +591,17 @@
     <Content Include="Global.asax" />
     <Content Include="Logout.aspx" />
     <Content Include="Pages\Admin\Dashboard.aspx" />
+    <Content Include="Pages\Admin\Detail_Jenis_Periode.aspx" />
+    <Content Include="Pages\Admin\Detail_Jenis_Periode_Edit.aspx" />
+    <Content Include="Pages\Admin\Detail_Jenis_Periode_Hapus.aspx" />
+    <Content Include="Pages\Admin\Detail_Jenis_Periode_Tambah.aspx" />
+    <Content Include="Pages\Admin\Detail_Pertanyaan_Jawaban.aspx" />
+    <Content Include="Pages\Admin\Jawaban_Kuesioner.aspx" />
+    <Content Include="Pages\Admin\Konfirmasi_Akun.aspx" />
+    <Content Include="Pages\Admin\Konfirmasi_Akun_Update.aspx" />
+    <Content Include="Pages\Admin\Laporan_Kuesioner_Excel.aspx" />
+    <Content Include="Pages\Admin\Pengingat.aspx" />
+    <Content Include="Pages\Admin\Pertanyaan_Kuesioner.aspx" />
     <Content Include="Pages\Alumni\Dashboard.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
@@ -630,6 +644,83 @@
     </Compile>
     <Compile Include="Pages\Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode.aspx.cs">
+      <DependentUpon>Detail_Jenis_Periode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode.aspx.designer.cs">
+      <DependentUpon>Detail_Jenis_Periode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode_Edit.aspx.cs">
+      <DependentUpon>Detail_Jenis_Periode_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode_Edit.aspx.designer.cs">
+      <DependentUpon>Detail_Jenis_Periode_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode_Hapus.aspx.cs">
+      <DependentUpon>Detail_Jenis_Periode_Hapus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode_Hapus.aspx.designer.cs">
+      <DependentUpon>Detail_Jenis_Periode_Hapus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode_Tambah.aspx.cs">
+      <DependentUpon>Detail_Jenis_Periode_Tambah.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Jenis_Periode_Tambah.aspx.designer.cs">
+      <DependentUpon>Detail_Jenis_Periode_Tambah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban.aspx.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban.aspx.designer.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner.aspx.cs">
+      <DependentUpon>Jawaban_Kuesioner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner.aspx.designer.cs">
+      <DependentUpon>Jawaban_Kuesioner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Konfirmasi_Akun.aspx.cs">
+      <DependentUpon>Konfirmasi_Akun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Konfirmasi_Akun.aspx.designer.cs">
+      <DependentUpon>Konfirmasi_Akun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Konfirmasi_Akun_Update.aspx.cs">
+      <DependentUpon>Konfirmasi_Akun_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Konfirmasi_Akun_Update.aspx.designer.cs">
+      <DependentUpon>Konfirmasi_Akun_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Laporan_Kuesioner_Excel.aspx.cs">
+      <DependentUpon>Laporan_Kuesioner_Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Laporan_Kuesioner_Excel.aspx.designer.cs">
+      <DependentUpon>Laporan_Kuesioner_Excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Pengingat.aspx.cs">
+      <DependentUpon>Pengingat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Pengingat.aspx.designer.cs">
+      <DependentUpon>Pengingat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner.aspx.cs">
+      <DependentUpon>Pertanyaan_Kuesioner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner.aspx.designer.cs">
+      <DependentUpon>Pertanyaan_Kuesioner.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Alumni\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

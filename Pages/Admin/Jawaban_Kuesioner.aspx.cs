@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace study_tracer.Pages.Admin
+{
+    public partial class Jawaban_Kuesioner : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                tbDeskripsiJawaban.TextMode = TextBoxMode.MultiLine;
+                tbDeskripsiJawaban.Rows = 10;
+                loadData();
+            }
+
+            gridDataJawabanKuesioner.Width = Unit.Percentage(100);
+        }
+
+        protected void loadData()
+        {
+
+        }
+
+        protected void linkCari_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnTambah_Click(object sender, EventArgs e)
+        {
+            panelView.Visible = false;
+            panelManipulasiData.Visible = true;
+
+            titleManipulasiData.Text = "Form Tambah Data Jawaban Kuesioner";
+        }
+
+        protected void gridDataJawabanKuesioner_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gridDataJawabanKuesioner.PageIndex = e.NewPageIndex;
+            loadData();
+        }
+
+        protected void gridDataJawabanKuesioner_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName != "Page")
+            {
+                string tempId = gridDataJawabanKuesioner.DataKeys[Convert.ToInt32(e.CommandArgument)].Value.ToString();
+
+                if (e.CommandName == "Hapus")
+                {
+                    deleteDataJawabanKuesioner(tempId);
+                }
+                else if (e.CommandName == "Ubah")
+                {
+
+                }
+            }
+        }
+
+        protected void deleteDataJawabanKuesioner(string id)
+        {
+
+        }
+
+        protected void btnKirim_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

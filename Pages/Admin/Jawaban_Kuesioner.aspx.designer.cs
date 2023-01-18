@@ -7,110 +7,146 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace study_tracer
+namespace study_tracer.Pages.Admin
 {
 
 
-    public partial class Register
+    public partial class Jawaban_Kuesioner
     {
 
         /// <summary>
-        /// tbNIM control.
+        /// panelView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNIM;
+        protected global::System.Web.UI.WebControls.Panel panelView;
 
         /// <summary>
-        /// tbNama control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNama;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// tbNIK control.
+        /// txtCari control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNIK;
+        protected global::System.Web.UI.WebControls.TextBox txtCari;
 
         /// <summary>
-        /// tbTanggalLahir control.
+        /// linkCari control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbTanggalLahir;
+        protected global::System.Web.UI.WebControls.LinkButton linkCari;
 
         /// <summary>
-        /// ddlTahunLulus control.
+        /// ddStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTahunLulus;
+        protected global::System.Web.UI.WebControls.DropDownList ddStatus;
 
         /// <summary>
-        /// tbTelepon control.
+        /// btnTambah control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbTelepon;
+        protected global::System.Web.UI.WebControls.LinkButton btnTambah;
 
         /// <summary>
-        /// tbEmail control.
+        /// gridDataJawabanKuesioner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEmail;
+        protected global::System.Web.UI.WebControls.GridView gridDataJawabanKuesioner;
 
         /// <summary>
-        /// tbPassword control.
+        /// panelManipulasiData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPassword;
+        protected global::System.Web.UI.WebControls.Panel panelManipulasiData;
 
         /// <summary>
-        /// tbKonfirmasiPassword control.
+        /// titleManipulasiData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKonfirmasiPassword;
+        protected global::System.Web.UI.WebControls.Label titleManipulasiData;
 
         /// <summary>
-        /// tbAlamat control.
+        /// tbId_jawabanKuesioner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbAlamat;
+        protected global::System.Web.UI.WebControls.TextBox tbId_jawabanKuesioner;
 
         /// <summary>
-        /// btnDaftar control.
+        /// ddlPertanyaan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDaftar;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPertanyaan;
+
+        /// <summary>
+        /// tbDeskripsiJawaban control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbDeskripsiJawaban;
+
+        /// <summary>
+        /// tbKodeJawaban control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbKodeJawaban;
+
+        /// <summary>
+        /// ddlTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTextbox;
+
+        /// <summary>
+        /// btnKirim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnKirim;
     }
 }

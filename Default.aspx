@@ -13,7 +13,7 @@
                 Nomor Induk Mahasiswa (NIM)
                 <span style="color: red;">*</span>
             </label>
-            <asp:TextBox runat="server" ID="txtUsername" CssClass="form-control" />
+            <asp:TextBox MaxLength="10" runat="server" ID="txtUsername" CssClass="form-control" />
         </div>
 
         <div class="form-group">
@@ -21,10 +21,10 @@
                 Kata Sandi
                 <span style="color: red;">*</span>
             </label>
-            <asp:TextBox runat="server" TextMode="Password" ID="txtPassword" CssClass="form-control" />
+            <asp:TextBox MaxLength="50" runat="server" TextMode="Password" ID="txtPassword" CssClass="form-control" />
         </div>
 
-        <asp:Button Text="Masuk" runat="server" CssClass="btn btn-primary" Width="100%" id="btnLogin" OnClick="btnLogin_Click" /><br />
+        <asp:Button Text="Masuk" runat="server" CssClass="btn btn-primary" style="width: 100%; margin-top: 10px; margin-bottom: 10px;" id="btnLogin" OnClick="btnLogin_Click" /><br />
         <span style="margin-top: 20px;">Belum Terdaftar Sebagai Alumni? <a href='/Register.aspx'>Klik disini</a>.</span>
     </div>
 </asp:Content>

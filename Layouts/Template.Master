@@ -6,17 +6,16 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-
     <link rel="shortcut icon" href="/assets/favicon.png">
     <link href="/assets/Plugins/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/Plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="/assets/Content/jquery.fancybox.css" rel="stylesheet" />
     <link href="/assets/Content/bootstrap-select.min.css" rel="stylesheet" />
     <link href="/assets/Styles/Style.css" rel="stylesheet" />
-
     <script src="/assets/Scripts/tether/tether.min.js"></script>
     <script src="/assets/Scripts/jquery-3.1.1.min.js"></script>
     <script src="/assets/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="/assets/Plugins/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
     <script src="/assets/Plugins/Highcharts-5.0.14/code/highcharts.js"></script>
     <script src="/assets/Plugins/Highcharts-5.0.14/code/highcharts-more.js"></script>
@@ -25,6 +24,8 @@
     <script src="/assets/Scripts/jquery.fancybox.pack.js"></script>
     <script src="/assets/Scripts/bootstrap-select.min.js"></script>
     <script src="/assets/Scripts/LetterAvatar.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script type="text/javascript">
         //$(function () {
@@ -108,7 +109,7 @@
             <div class="polman-menu-bar">
                 <div class="float-right">
                     <div class="fa fa-bars fa-2x" style="margin-top: 9px; cursor: pointer;" aria-hidden="true" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-controls="menu"></div>
-                </div>
+                </div>  
             </div>
 
         </div>
@@ -118,7 +119,33 @@
                 <div class="list-group">
                     <a class="list-group-item list-group-item-action polman-username" style="border-radius: 0px; border: none; background-color: #EEE;">Hai,&nbsp;<b runat="server" id="username2"></b></a>
                     <a href="/Logout.aspx" class="list-group-item list-group-item-action" style="border-radius: 0px; border: none; padding-left: 23px;"><i class="fa fa-sign-out fa-lg fa-pull-left"></i>Logout</a>
-                    <asp:Literal runat="server" ID="literalMenu"></asp:Literal>
+                    <%--<asp:Literal runat="server" ID="literalMenu"></asp:Literal>--%>
+                    <a href='/Pages/Admin/Dashboard.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Dashboard Admin" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 22px; display: inherit;'>
+                        <i class='fa fa-home fa-lg fa-pull-left'></i>Dashboard
+                    </a>
+
+                    <a href='#menu1' role='tab' class='list-group-item list-group-item-action' data-toggle='collapse' data-parent='#accordion' aria-expanded='true' aria-controls='menu1' style='border-radius: 0px; border: none;'>
+                        <i class='fa fa-chevron-down fa-lg fa-pull-left'></i>Kuesioner
+                    </a>
+                    <div id='menu1' class='collapse <%: Page.Title == "Pertanyaan Kuesioner" ? "show" : Page.Title == "Jawaban Kuesioner" ? "show" : Page.Title == "Detail Jenis Periode" ? "show" : Page.Title == "Detail Pertanyaan Jawaban" ? "show" : "" %>' role='tabpanel'>
+                        <a href='/Pages/Admin/Pertanyaan_Kuesioner.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Pertanyaan Kuesioner" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 47px; display: inherit;'><i class='fa fa-question-circle fa-lg fa-pull-left' style="margin-top: 2px;"></i>Pertanyaan Kuesioner</a>
+                        <a href='/Pages/Admin/Jawaban_Kuesioner.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Jawaban Kuesioner" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 47px; display: inherit;'><i class='fa fa-info-circle fa-lg fa-pull-left' style="margin-top: 2px;"></i>Jawaban Kuesioner</a>
+                        <a href='/Pages/Admin/Detail_Jenis_Periode.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Detail Jenis Periode" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 47px; display: inherit;'><i class='fa fa-calendar-check-o fa-lg fa-pull-left' style="margin-top: 2px;"></i>Detail Jenis Periode</a>
+                        <a href='/Pages/Admin/Detail_Pertanyaan_Jawaban.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Detail Pertanyaan Jawaban" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 47px; display: inherit;'><i class='fa fa-plus-circle fa-lg fa-pull-left' style="margin-top: 2px;"></i>Detail Pertanyaan Jawaban</a>
+                    </div>
+
+                    <a href='/Pages/Admin/Laporan_Kuesioner_Excel.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Laporan Kuesioner Excel" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 22px; display: inherit;'>
+                        <i class='fa fa-file-excel-o fa-lg fa-pull-left'></i>Laporan Kuesioner Excel
+                    </a>
+
+                    <a href='/Pages/Admin/Pengingat.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Pengingat" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 22px; display: inherit;'>
+                        <i class='fa fa-bell fa-lg fa-pull-left'></i>Pengingat
+                    </a>
+
+                    <a href='/Pages/Admin/Konfirmasi_Akun.aspx' class='list-group-item list-group-item-action <%: Page.Title == "Konfirmasi Akun" ? "polman-menu-active" : "" %>' style='border-radius: 0px; border: none; padding-left: 22px; display: inherit;'>
+                        <i class='fa fa-check-circle fa-lg fa-pull-left'></i>Konfirmasi Akun
+                    </a>
+
                     <a href="https://sia.polman.astra.ac.id/sso" class="list-group-item list-group-item-action" style="border-radius: 0px; border: none; padding-left: 23px;"><i class='fa fa-external-link fa-lg fa-pull-left'></i>Halaman SSO</a>
                 </div>
             </div>
@@ -135,6 +162,29 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <script>
+            function berhasilTambahDataDJP() {
+                Swal.fire(
+                    'Berhasil !',
+                    'Data Jenis Periode berhasil Ditambahkan !!',
+                    'success'
+                ).then(function () {
+                    window.location = '/Pages/Admin/Detail_Jenis_Periode.aspx';
+                });
+            }
+
+            function error() {
+                Swal.fire(
+                    'Gagal !',
+                    'NIM atau Kata Sandi tidak Sesuai !!',
+                    'error'
+                )
+            }
+        </script>
     </form>
 
     <script>
