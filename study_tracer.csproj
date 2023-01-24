@@ -596,12 +596,21 @@
     <Content Include="Pages\Admin\Detail_Jenis_Periode_Hapus.aspx" />
     <Content Include="Pages\Admin\Detail_Jenis_Periode_Tambah.aspx" />
     <Content Include="Pages\Admin\Detail_Pertanyaan_Jawaban.aspx" />
+    <Content Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Edit.aspx" />
+    <Content Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Hapus.aspx" />
+    <Content Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Tambah.aspx" />
     <Content Include="Pages\Admin\Jawaban_Kuesioner.aspx" />
+    <Content Include="Pages\Admin\Jawaban_Kuesioner_Edit.aspx" />
+    <Content Include="Pages\Admin\Jawaban_Kuesioner_Hapus.aspx" />
+    <Content Include="Pages\Admin\Jawaban_Kuesioner_Tambah.aspx" />
     <Content Include="Pages\Admin\Konfirmasi_Akun.aspx" />
     <Content Include="Pages\Admin\Konfirmasi_Akun_Update.aspx" />
     <Content Include="Pages\Admin\Laporan_Kuesioner_Excel.aspx" />
     <Content Include="Pages\Admin\Pengingat.aspx" />
     <Content Include="Pages\Admin\Pertanyaan_Kuesioner.aspx" />
+    <Content Include="Pages\Admin\Pertanyaan_Kuesioner_Edit.aspx" />
+    <Content Include="Pages\Admin\Pertanyaan_Kuesioner_Hapus.aspx" />
+    <Content Include="Pages\Admin\Pertanyaan_Kuesioner_Tambah.aspx" />
     <Content Include="Pages\Alumni\Dashboard.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
@@ -623,6 +632,13 @@
     </Compile>
     <Compile Include="Layouts\Template.Master.designer.cs">
       <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Template_Alumni.Master.cs">
+      <DependentUpon>Template_Alumni.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Template_Alumni.Master.designer.cs">
+      <DependentUpon>Template_Alumni.Master</DependentUpon>
     </Compile>
     <Compile Include="Layouts\Template_Login.Master.cs">
       <DependentUpon>Template_Login.Master</DependentUpon>
@@ -680,12 +696,54 @@
     <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban.aspx.designer.cs">
       <DependentUpon>Detail_Pertanyaan_Jawaban.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Edit.aspx.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Edit.aspx.designer.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Hapus.aspx.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban_Hapus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Hapus.aspx.designer.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban_Hapus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Tambah.aspx.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban_Tambah.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Detail_Pertanyaan_Jawaban_Tambah.aspx.designer.cs">
+      <DependentUpon>Detail_Pertanyaan_Jawaban_Tambah.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Admin\Jawaban_Kuesioner.aspx.cs">
       <DependentUpon>Jawaban_Kuesioner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Admin\Jawaban_Kuesioner.aspx.designer.cs">
       <DependentUpon>Jawaban_Kuesioner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner_Edit.aspx.cs">
+      <DependentUpon>Jawaban_Kuesioner_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner_Edit.aspx.designer.cs">
+      <DependentUpon>Jawaban_Kuesioner_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner_Hapus.aspx.cs">
+      <DependentUpon>Jawaban_Kuesioner_Hapus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner_Hapus.aspx.designer.cs">
+      <DependentUpon>Jawaban_Kuesioner_Hapus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner_Tambah.aspx.cs">
+      <DependentUpon>Jawaban_Kuesioner_Tambah.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Jawaban_Kuesioner_Tambah.aspx.designer.cs">
+      <DependentUpon>Jawaban_Kuesioner_Tambah.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\Konfirmasi_Akun.aspx.cs">
       <DependentUpon>Konfirmasi_Akun.aspx</DependentUpon>
@@ -721,6 +779,27 @@
     </Compile>
     <Compile Include="Pages\Admin\Pertanyaan_Kuesioner.aspx.designer.cs">
       <DependentUpon>Pertanyaan_Kuesioner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner_Edit.aspx.cs">
+      <DependentUpon>Pertanyaan_Kuesioner_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner_Edit.aspx.designer.cs">
+      <DependentUpon>Pertanyaan_Kuesioner_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner_Hapus.aspx.cs">
+      <DependentUpon>Pertanyaan_Kuesioner_Hapus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner_Hapus.aspx.designer.cs">
+      <DependentUpon>Pertanyaan_Kuesioner_Hapus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner_Tambah.aspx.cs">
+      <DependentUpon>Pertanyaan_Kuesioner_Tambah.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Pertanyaan_Kuesioner_Tambah.aspx.designer.cs">
+      <DependentUpon>Pertanyaan_Kuesioner_Tambah.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Alumni\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -874,6 +953,7 @@
     <Content Include="assets\Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
     <Content Include="Layouts\Template_Login.Master" />
     <Content Include="Layouts\Template.Master" />
+    <Content Include="Layouts\Template_Alumni.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

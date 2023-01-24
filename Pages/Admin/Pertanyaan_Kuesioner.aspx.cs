@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -13,8 +16,6 @@ namespace study_tracer.Pages.Admin
         {
             if (!IsPostBack)
             {
-                tbDeskripsiPertanyaan.TextMode = TextBoxMode.MultiLine;
-                tbDeskripsiPertanyaan.Rows = 10;
                 loadData();
             }
 
@@ -23,12 +24,25 @@ namespace study_tracer.Pages.Admin
 
         protected void loadData()
         {
+            DataTable dt = new DataTable();
 
+            SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+            connection.Open();
+
+            SqlCommand cmd = new SqlCommand("ts_getDataPertanyaanKuesioner", connection);
+            cmd.Parameters.AddWithValue("@query", txtCari.Text);
+            cmd.CommandType = CommandType.StoredProcedure;
+            dt.Load(cmd.ExecuteReader());
+
+            gridDataPertanyaanKuesioner.DataSource = dt;
+            gridDataPertanyaanKuesioner.DataBind();
+
+            connection.Close();
         }
 
         protected void linkCari_Click(object sender, EventArgs e)
         {
-
+            loadData();
         }
 
         protected void gridDataPertanyaanKuesioner_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -39,18 +53,7 @@ namespace study_tracer.Pages.Admin
 
         protected void gridDataPertanyaanKuesioner_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName != "Page")
-            {
-                string tempId = gridDataPertanyaanKuesioner.DataKeys[Convert.ToInt32(e.CommandArgument)].Value.ToString();
-
-                if (e.CommandName == "Hapus")
-                {
-                    deleteDataPKU(tempId);
-                } else if (e.CommandName == "Ubah")
-                {
-
-                }
-            }
+        
         }
 
         protected void deleteDataPKU(string id)
@@ -70,10 +73,7 @@ namespace study_tracer.Pages.Admin
 
         protected void btnTambahh_Click(object sender, EventArgs e)
         {
-            panelView.Visible = false;
-            panelManipulasiData.Visible = true;
-
-            titleManipulasiData.Text = "Form Tambah Data Pertanyaan Kuesioner";
+            Response.Redirect("/Pages/Admin/Pertanyaan_Kuesioner_Tambah.aspx");
         }
 
         protected void btnKirimm_Click(object sender, EventArgs e)

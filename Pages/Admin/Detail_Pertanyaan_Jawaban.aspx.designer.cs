@@ -15,15 +15,6 @@ namespace study_tracer.Pages.Admin
     {
 
         /// <summary>
-        /// panelView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelView;
-
-        /// <summary>
         /// txtCari control.
         /// </summary>
         /// <remarks>
@@ -67,59 +58,5 @@ namespace study_tracer.Pages.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gridDataDetailPertanyaanJawaban;
-
-        /// <summary>
-        /// panelManipulasiData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelManipulasiData;
-
-        /// <summary>
-        /// titleManipulasiData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label titleManipulasiData;
-
-        /// <summary>
-        /// tbId_detailPertanyaanJawaban control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbId_detailPertanyaanJawaban;
-
-        /// <summary>
-        /// ddlJawabanKuesioner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlJawabanKuesioner;
-
-        /// <summary>
-        /// ddlPertanyaanTurunan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPertanyaanTurunan;
-
-        /// <summary>
-        /// btnKirim control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnKirim;
     }
 }

@@ -11,70 +11,70 @@ namespace study_tracer.Pages.Admin
 {
 
 
-    public partial class Pertanyaan_Kuesioner
+    public partial class Jawaban_Kuesioner_Edit
     {
 
         /// <summary>
-        /// panelView control.
+        /// titleManipulasiData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelView;
+        protected global::System.Web.UI.WebControls.Label titleManipulasiData;
 
         /// <summary>
-        /// Label1 control.
+        /// ddlPertanyaan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPertanyaan;
 
         /// <summary>
-        /// txtCari control.
+        /// tbDeskripsiJawaban control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCari;
+        protected global::System.Web.UI.WebControls.TextBox tbDeskripsiJawaban;
 
         /// <summary>
-        /// linkCari control.
+        /// tbKodeJawaban control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkCari;
+        protected global::System.Web.UI.WebControls.TextBox tbKodeJawaban;
 
         /// <summary>
-        /// ddStatus control.
+        /// tbNilaiJawaban control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddStatus;
+        protected global::System.Web.UI.WebControls.TextBox tbNilaiJawaban;
 
         /// <summary>
-        /// btnTambahh control.
+        /// ddlTextbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnTambahh;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTextbox;
 
         /// <summary>
-        /// gridDataPertanyaanKuesioner control.
+        /// btnKirim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridDataPertanyaanKuesioner;
+        protected global::System.Web.UI.WebControls.LinkButton btnKirim;
     }
 }

@@ -11,61 +11,43 @@ namespace study_tracer.Pages.Admin
 {
 
 
-    public partial class Jawaban_Kuesioner
+    public partial class Detail_Pertanyaan_Jawaban_Tambah
     {
 
         /// <summary>
-        /// Label1 control.
+        /// titleManipulasiData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label titleManipulasiData;
 
         /// <summary>
-        /// txtCari control.
+        /// ddlJawabanKuesioner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCari;
+        protected global::System.Web.UI.WebControls.DropDownList ddlJawabanKuesioner;
 
         /// <summary>
-        /// linkCari control.
+        /// ddlPertanyaanTurunan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkCari;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPertanyaanTurunan;
 
         /// <summary>
-        /// ddStatus control.
+        /// btnKirim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddStatus;
-
-        /// <summary>
-        /// btnTambah control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnTambah;
-
-        /// <summary>
-        /// gridDataJawabanKuesioner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridDataJawabanKuesioner;
+        protected global::System.Web.UI.WebControls.LinkButton btnKirim;
     }
 }

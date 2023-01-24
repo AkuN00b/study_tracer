@@ -177,6 +177,36 @@
                 });
             }
 
+            function berhasilTambahDataDPJ() {
+                Swal.fire(
+                    'Berhasil !',
+                    'Data Pertanyaan Jawaban berhasil Ditambahkan !!',
+                    'success'
+                ).then(function () {
+                    window.location = '/Pages/Admin/Detail_Pertanyaan_Jawaban.aspx';
+                });
+            }
+
+            function berhasilTambahDataKuesioner() {
+                Swal.fire(
+                    'Berhasil !',
+                    'Data Pertanyaan Kuesioner berhasil Ditambahkan !!',
+                    'success'
+                ).then(function () {
+                    window.location = '/Pages/Admin/Pertanyaan_Kuesioner.aspx';
+                });
+            }
+
+            function berhasilTambahDataJK() {
+                Swal.fire(
+                    'Berhasil !',
+                    'Data Jawaban Kuesioner berhasil Ditambahkan !!',
+                    'success'
+                ).then(function () {
+                    window.location = '/Pages/Admin/Jawaban_Kuesioner.aspx';
+                });
+            }
+
             function error() {
                 Swal.fire(
                     'Gagal !',

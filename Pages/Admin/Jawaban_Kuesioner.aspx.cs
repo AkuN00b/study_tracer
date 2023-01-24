@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -13,8 +16,6 @@ namespace study_tracer.Pages.Admin
         {
             if (!IsPostBack)
             {
-                tbDeskripsiJawaban.TextMode = TextBoxMode.MultiLine;
-                tbDeskripsiJawaban.Rows = 10;
                 loadData();
             }
 
@@ -23,20 +24,30 @@ namespace study_tracer.Pages.Admin
 
         protected void loadData()
         {
+            DataTable dt = new DataTable();
 
+            SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+            connection.Open();
+
+            SqlCommand cmd = new SqlCommand("ts_getDataJawabanKuesioner", connection);
+            cmd.Parameters.AddWithValue("@query", txtCari.Text);
+            cmd.CommandType = CommandType.StoredProcedure;
+            dt.Load(cmd.ExecuteReader());
+
+            gridDataJawabanKuesioner.DataSource = dt;
+            gridDataJawabanKuesioner.DataBind();
+
+            connection.Close();
         }
 
         protected void linkCari_Click(object sender, EventArgs e)
         {
-
+            loadData();
         }
 
         protected void btnTambah_Click(object sender, EventArgs e)
         {
-            panelView.Visible = false;
-            panelManipulasiData.Visible = true;
-
-            titleManipulasiData.Text = "Form Tambah Data Jawaban Kuesioner";
+            Response.Redirect("/Pages/Admin/Jawaban_Kuesioner_Tambah.aspx");
         }
 
         protected void gridDataJawabanKuesioner_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -47,19 +58,7 @@ namespace study_tracer.Pages.Admin
 
         protected void gridDataJawabanKuesioner_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName != "Page")
-            {
-                string tempId = gridDataJawabanKuesioner.DataKeys[Convert.ToInt32(e.CommandArgument)].Value.ToString();
-
-                if (e.CommandName == "Hapus")
-                {
-                    deleteDataJawabanKuesioner(tempId);
-                }
-                else if (e.CommandName == "Ubah")
-                {
-
-                }
-            }
+            
         }
 
         protected void deleteDataJawabanKuesioner(string id)
